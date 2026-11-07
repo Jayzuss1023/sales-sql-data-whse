@@ -4,6 +4,9 @@ Purpose:
     A silver schema is created within this script. It drops any existing tables
 */
 
+USE DataWarehouse;
+GO
+
 IF OBJECT_ID('silver.crm_cust_info', 'U') IS NOT NULL
     DROP TABLE silver.crm_cust_info;
 GO
@@ -41,7 +44,7 @@ IF OBJECT_ID('silver.crm_sales_details', 'U') IS NOT NULL
     DROP TABLE silver.crm_sales_details;
 GO
 
-CREATE TABLE silver.crm_sales_detauls (
+CREATE TABLE silver.crm_sales_details (
     sls_order_num   NVARCHAR(50),
     sls_prd_key     NVARCHAR(50),
     sls_cust_id     INT,

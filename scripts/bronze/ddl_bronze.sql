@@ -3,6 +3,8 @@
  Create tables in the bronze schema, dropping existing tables if they already exists
 */
 
+USE DataWarehouse;
+GO
 
 IF OBJECT_ID('bronze.crm_cust_info', 'U') IS NOT NULL
     DROP TABLE bronze.crm_cust_info;
@@ -30,7 +32,7 @@ CREATE TABLE bronze.crm_prd_info (
     prd_cost        INT,
     prd_line        NVARCHAR(50),
     prd_start_dt    DATETIME,
-    prd_end_dt      DATETIME,
+    prd_end_dt      DATETIME
 );
 GO
 
@@ -51,7 +53,7 @@ CREATE TABLE bronze.crm_sales_details (
 );
 GO
 
-IF OBJECT_ID('bronze.erp_loc_a101') IS NOT NULL
+IF OBJECT_ID('bronze.erp_loc_a101', 'U') IS NOT NULL
     DROP TABLE bronze.erp_loc_a101;
 GO
 
