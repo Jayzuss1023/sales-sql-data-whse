@@ -1,0 +1,5 @@
+{
+  "mssql.intelliSense.enable": false,
+  "sql.intelliSense.enable": false,
+  "sql.validation.enabled": false
+}
