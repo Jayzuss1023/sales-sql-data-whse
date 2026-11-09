@@ -56,6 +56,8 @@ BEGIN
         -- Loading silver.crm_prd_info
         SET @start_time = GETDATE();
         PRINT '>> Truncating Table: silver.crm_prd_info';
+        TRUNCATE TABLE silver.crm_prd_info;
+        PRINT 'Loading Data Into: silver.crm_prd_info'
         INSERT INTO silver.crm_prd_info (
             prd_id,
             cat_id,
